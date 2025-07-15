@@ -1,12 +1,43 @@
-# React + Vite
+<h1 align="left">Planeta X Burger - Interface</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+###
 
-Currently, two official plugins are available:
+<h2 align="left">Descrição</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+###
 
-## Expanding the ESLint configuration
+<p align="left">Projeto front-end em React para o site da hamburgueria **Planeta X Burger**.<br><br>Este projeto tem como objetivo criar uma interface moderna, responsiva e visualmente atraente para o Planeta X Burger.  <br>No momento, a aplicação está no estágio inicial, com a implementação da **tela de login** utilizando React e styled-components para estilização.</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###
+
+<h2 align="left">Tecnologias utilizadas</h2>
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=styledcomponents" height="40" alt="styledcomponents logo"  />
+</div>
+
+###
+
+<h2 align="left">Próximo passo</h2>
+
+###
+
+<p align="left">• Implementar as telas de cadastro e recuperação de senha<br><br>• Criar a navegação entre páginas com React Router<br><br>• Desenvolver a página principal com o cardápio de hambúrgueres<br><br>• Integrar API para autenticação e dados dinâmicos</p>
+
+###
+
+<h2 align="left">Status</h2>
+
+###
+
+<p align="left">🚧Em andamento🚧</p>
+
+###
