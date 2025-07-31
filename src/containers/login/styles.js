@@ -82,30 +82,25 @@ export const InputContainer = styled.div`
     border-radius: 5px;
     font-size: 1rem;
   }
+
+  label {
+    font-size: 25px;
+  }
 `;
 
 export const Link = styled.a`
   font-family: "Road Rage", sans-serif;
-  color: rgb(241, 195, 42);
+  color: rgba(255, 255, 255, 1);
   margin-top: 10px;
 
   span {
     font-family: "Road Rage", sans-serif;
     color: rgb(241, 195, 42);
-  }
-`;
+    text-decoration: underline;
+    cursor: pointer;
 
-export const Button = styled.button`
-  padding: 12px 20px;
-  background-color: rgb(241, 195, 42);
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-
-  &:hover {
-    background-color: #e6b800;
+    &:hover {
+      color: #e6b800;
+    }
   }
 `;
