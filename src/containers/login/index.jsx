@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { toast } from "react-toastify";
+
+import Logo from "../../assets/logoxp.png";
+import { Button } from "../../components/Button";
+import { api } from "../../services/api";
 import {
   Container,
   Form,
@@ -10,14 +15,18 @@ import {
   RightContainer,
   Title,
 } from "./styles";
-import Logo from "../../assets/logoxp.png";
-import { Button } from "../../components/Button";
 
 export function Login() {
   const schema = yup
     .object({
-      email: yup.string().email().required(),
-      password: yup.string().min(6).required(),
+      email: yup
+        .string()
+        .email("Hey, esse email não é válido 😭")
+        .required("Vish, esqueceu do email"),
+      password: yup
+        .string()
+        .min(6, "Hey, falta caracteres nessa senha 😭")
+        .required("Vish, esqueceu da senha"),
     })
     .required();
 
@@ -28,7 +37,24 @@ export function Login() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+
+  console.log(errors);
+
+  const onSubmit = async (data) => {
+    const response = await toast.promise(
+      api.post("/session", {
+        email: data.email,
+        password: data.password,
+      }),
+      {
+        pending: "Verificando seus dados",
+        success: "Tudo certo, aproveite 👌🤤",
+        error: "Verifique seus dados 🤯",
+      },
+    );
+
+    console.log(response);
+  };
 
   return (
     <Container>
@@ -48,11 +74,13 @@ export function Login() {
           <InputContainer>
             <label>Email</label>
             <input type="email" {...register("email")} />
+            <p>{errors?.email?.message}</p>
           </InputContainer>
 
           <InputContainer>
             <label>Senha</label>
             <input type="password" {...register("password")} />
+            <p>{errors?.password?.message}</p>
           </InputContainer>
           <Button type="submit">Entrar</Button>
         </Form>

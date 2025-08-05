@@ -40,6 +40,12 @@ export const RightContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-color: #999;
+
+  p {
+    font-size: 14px;
+    line-height: 80%;
+    height: 10px;
+  }
 `;
 
 export const Title = styled.h2`
